@@ -13,7 +13,11 @@
 </div>
 <%#チャット一覧部分%>
 <div class="messages">
-  <div class="message">
+  <%= render partial: 'message', collection: @messages %>
+</div>  
+
+
+  <!--<div class="message">
     <div class="upper-message">
       <div class="message-user">
         TOM
@@ -42,8 +46,9 @@
       こんばんは
       </div>
     </div>
-  </div>
-</div>
+  </div>-->
+
+
 <%#投稿フォーム部分%>
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
